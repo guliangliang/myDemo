@@ -12,11 +12,12 @@ import java.math.RoundingMode;
 public class DigitalTest {
 
     public static void main(String[] args) {
-        System.out.println(1%21);
-        //向上100取整数
-        BigDecimal principal = new BigDecimal(2300000);
-        double perInstallmentRate = 0.18 / 12;
-        BigDecimal installmentAmount = ceil100(pmt(principal, perInstallmentRate, 3));
+//        System.out.println(1%21);
+//        //向上100取整数
+//        BigDecimal principal = new BigDecimal(2300000);
+//        double perInstallmentRate = 0.18 / 12;
+//        BigDecimal installmentAmount = ceil100(pmt(principal, perInstallmentRate, 3));
+//        System.out.println(new BigDecimal());
     }
 
 
