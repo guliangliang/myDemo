@@ -6,5 +6,5 @@ package com.test.myDemo.base;
  */
 public class FinalKeyTest {
 
-    public final int i = 100 ;
+    public int i = 100 ;
 }

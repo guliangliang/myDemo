@@ -18,6 +18,14 @@ public class DigitalTest {
 //        double perInstallmentRate = 0.18 / 12;
 //        BigDecimal installmentAmount = ceil100(pmt(principal, perInstallmentRate, 3));
 //        System.out.println(new BigDecimal());
+
+        double t1 = 10164019130d;double t3 = 185632238;double t4 = 3343421;
+        double t2 =  214317696;
+
+
+
+        System.out.println(new BigDecimal(t1 + t2 + t3 + t4).toString());
+
     }
 
 
