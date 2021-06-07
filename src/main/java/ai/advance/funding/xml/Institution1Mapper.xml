@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ai.advance.funding.mapper.funding.Institution1Mapper">
+  <resultMap id="BaseResultMap" type="ai.advance.funding.bean.dto.Institution1">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="partner_code" jdbcType="VARCHAR" property="partnerCode" />
+    <result column="institution_name" jdbcType="VARCHAR" property="institutionName" />
+    <result column="institution_code" jdbcType="VARCHAR" property="institutionCode" />
+    <result column="settlement_type" jdbcType="VARCHAR" property="settlementType" />
+    <result column="institution_type" jdbcType="VARCHAR" property="institutionType" />
+    <result column="credit_limit" jdbcType="DECIMAL" property="creditLimit" />
+    <result column="currency" jdbcType="VARCHAR" property="currency" />
+    <result column="enable" jdbcType="BIT" property="enable" />
+    <result column="priority" jdbcType="INTEGER" property="priority" />
+    <result column="account_sign" jdbcType="BIGINT" property="accountSign" />
+    <result column="interest_rate" jdbcType="DECIMAL" property="interestRate" />
+    <result column="include_holiday" jdbcType="BIT" property="includeHoliday" />
+    <result column="start_time" jdbcType="VARCHAR" property="startTime" />
+    <result column="end_time" jdbcType="VARCHAR" property="endTime" />
+    <result column="daily_max_limit" jdbcType="INTEGER" property="dailyMaxLimit" />
+    <result column="daily_max_amount_limit" jdbcType="DECIMAL" property="dailyMaxAmountLimit" />
+    <result column="buyback_entity" jdbcType="VARCHAR" property="buybackEntity" />
+    <result column="lender" jdbcType="VARCHAR" property="lender" />
+    <result column="group_Legal_gntity" jdbcType="BIT" property="groupLegalGntity" />
+    <result column="disbursement_account" jdbcType="VARCHAR" property="disbursementAccount" />
+    <result column="disbursement_account_bank_name" jdbcType="VARCHAR" property="disbursementAccountBankName" />
+    <result column="repayment_account" jdbcType="VARCHAR" property="repaymentAccount" />
+    <result column="repayment_account_bank_name" jdbcType="VARCHAR" property="repaymentAccountBankName" />
+    <result column="source_of_fund" jdbcType="VARCHAR" property="sourceOfFund" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="deleted" jdbcType="BIT" property="deleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, partner_code, institution_name, institution_code, settlement_type, institution_type, 
+    credit_limit, currency, enable, priority, account_sign, interest_rate, include_holiday, 
+    start_time, end_time, daily_max_limit, daily_max_amount_limit, buyback_entity, lender, 
+    group_Legal_gntity, disbursement_account, disbursement_account_bank_name, repayment_account, 
+    repayment_account_bank_name, source_of_fund, create_time, update_time, deleted
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from institution1
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from institution1
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <insert id="insert" parameterType="ai.advance.funding.bean.dto.Institution1">
+    insert into institution1 (id, partner_code, institution_name, 
+      institution_code, settlement_type, institution_type, 
+      credit_limit, currency, enable, 
+      priority, account_sign, interest_rate, 
+      include_holiday, start_time, end_time, 
+      daily_max_limit, daily_max_amount_limit, buyback_entity, 
+      lender, group_Legal_gntity, disbursement_account, 
+      disbursement_account_bank_name, repayment_account, 
+      repayment_account_bank_name, source_of_fund, 
+      create_time, update_time, deleted
+      )
+    values (#{id,jdbcType=BIGINT}, #{partnerCode,jdbcType=VARCHAR}, #{institutionName,jdbcType=VARCHAR}, 
+      #{institutionCode,jdbcType=VARCHAR}, #{settlementType,jdbcType=VARCHAR}, #{institutionType,jdbcType=VARCHAR}, 
+      #{creditLimit,jdbcType=DECIMAL}, #{currency,jdbcType=VARCHAR}, #{enable,jdbcType=BIT}, 
+      #{priority,jdbcType=INTEGER}, #{accountSign,jdbcType=BIGINT}, #{interestRate,jdbcType=DECIMAL}, 
+      #{includeHoliday,jdbcType=BIT}, #{startTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR}, 
+      #{dailyMaxLimit,jdbcType=INTEGER}, #{dailyMaxAmountLimit,jdbcType=DECIMAL}, #{buybackEntity,jdbcType=VARCHAR}, 
+      #{lender,jdbcType=VARCHAR}, #{groupLegalGntity,jdbcType=BIT}, #{disbursementAccount,jdbcType=VARCHAR}, 
+      #{disbursementAccountBankName,jdbcType=VARCHAR}, #{repaymentAccount,jdbcType=VARCHAR}, 
+      #{repaymentAccountBankName,jdbcType=VARCHAR}, #{sourceOfFund,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, #{deleted,jdbcType=BIT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="ai.advance.funding.bean.dto.Institution1">
+    insert into institution1
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="partnerCode != null">
+        partner_code,
+      </if>
+      <if test="institutionName != null">
+        institution_name,
+      </if>
+      <if test="institutionCode != null">
+        institution_code,
+      </if>
+      <if test="settlementType != null">
+        settlement_type,
+      </if>
+      <if test="institutionType != null">
+        institution_type,
+      </if>
+      <if test="creditLimit != null">
+        credit_limit,
+      </if>
+      <if test="currency != null">
+        currency,
+      </if>
+      <if test="enable != null">
+        enable,
+      </if>
+      <if test="priority != null">
+        priority,
+      </if>
+      <if test="accountSign != null">
+        account_sign,
+      </if>
+      <if test="interestRate != null">
+        interest_rate,
+      </if>
+      <if test="includeHoliday != null">
+        include_holiday,
+      </if>
+      <if test="startTime != null">
+        start_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="dailyMaxLimit != null">
+        daily_max_limit,
+      </if>
+      <if test="dailyMaxAmountLimit != null">
+        daily_max_amount_limit,
+      </if>
+      <if test="buybackEntity != null">
+        buyback_entity,
+      </if>
+      <if test="lender != null">
+        lender,
+      </if>
+      <if test="groupLegalGntity != null">
+        group_Legal_gntity,
+      </if>
+      <if test="disbursementAccount != null">
+        disbursement_account,
+      </if>
+      <if test="disbursementAccountBankName != null">
+        disbursement_account_bank_name,
+      </if>
+      <if test="repaymentAccount != null">
+        repayment_account,
+      </if>
+      <if test="repaymentAccountBankName != null">
+        repayment_account_bank_name,
+      </if>
+      <if test="sourceOfFund != null">
+        source_of_fund,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="deleted != null">
+        deleted,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=BIGINT},
+      </if>
+      <if test="partnerCode != null">
+        #{partnerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionName != null">
+        #{institutionName,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionCode != null">
+        #{institutionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="settlementType != null">
+        #{settlementType,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionType != null">
+        #{institutionType,jdbcType=VARCHAR},
+      </if>
+      <if test="creditLimit != null">
+        #{creditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="currency != null">
+        #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="enable != null">
+        #{enable,jdbcType=BIT},
+      </if>
+      <if test="priority != null">
+        #{priority,jdbcType=INTEGER},
+      </if>
+      <if test="accountSign != null">
+        #{accountSign,jdbcType=BIGINT},
+      </if>
+      <if test="interestRate != null">
+        #{interestRate,jdbcType=DECIMAL},
+      </if>
+      <if test="includeHoliday != null">
+        #{includeHoliday,jdbcType=BIT},
+      </if>
+      <if test="startTime != null">
+        #{startTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=VARCHAR},
+      </if>
+      <if test="dailyMaxLimit != null">
+        #{dailyMaxLimit,jdbcType=INTEGER},
+      </if>
+      <if test="dailyMaxAmountLimit != null">
+        #{dailyMaxAmountLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="buybackEntity != null">
+        #{buybackEntity,jdbcType=VARCHAR},
+      </if>
+      <if test="lender != null">
+        #{lender,jdbcType=VARCHAR},
+      </if>
+      <if test="groupLegalGntity != null">
+        #{groupLegalGntity,jdbcType=BIT},
+      </if>
+      <if test="disbursementAccount != null">
+        #{disbursementAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="disbursementAccountBankName != null">
+        #{disbursementAccountBankName,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentAccount != null">
+        #{repaymentAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentAccountBankName != null">
+        #{repaymentAccountBankName,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceOfFund != null">
+        #{sourceOfFund,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        #{deleted,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="ai.advance.funding.bean.dto.Institution1">
+    update institution1
+    <set>
+      <if test="partnerCode != null">
+        partner_code = #{partnerCode,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionName != null">
+        institution_name = #{institutionName,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionCode != null">
+        institution_code = #{institutionCode,jdbcType=VARCHAR},
+      </if>
+      <if test="settlementType != null">
+        settlement_type = #{settlementType,jdbcType=VARCHAR},
+      </if>
+      <if test="institutionType != null">
+        institution_type = #{institutionType,jdbcType=VARCHAR},
+      </if>
+      <if test="creditLimit != null">
+        credit_limit = #{creditLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="currency != null">
+        currency = #{currency,jdbcType=VARCHAR},
+      </if>
+      <if test="enable != null">
+        enable = #{enable,jdbcType=BIT},
+      </if>
+      <if test="priority != null">
+        priority = #{priority,jdbcType=INTEGER},
+      </if>
+      <if test="accountSign != null">
+        account_sign = #{accountSign,jdbcType=BIGINT},
+      </if>
+      <if test="interestRate != null">
+        interest_rate = #{interestRate,jdbcType=DECIMAL},
+      </if>
+      <if test="includeHoliday != null">
+        include_holiday = #{includeHoliday,jdbcType=BIT},
+      </if>
+      <if test="startTime != null">
+        start_time = #{startTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=VARCHAR},
+      </if>
+      <if test="dailyMaxLimit != null">
+        daily_max_limit = #{dailyMaxLimit,jdbcType=INTEGER},
+      </if>
+      <if test="dailyMaxAmountLimit != null">
+        daily_max_amount_limit = #{dailyMaxAmountLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="buybackEntity != null">
+        buyback_entity = #{buybackEntity,jdbcType=VARCHAR},
+      </if>
+      <if test="lender != null">
+        lender = #{lender,jdbcType=VARCHAR},
+      </if>
+      <if test="groupLegalGntity != null">
+        group_Legal_gntity = #{groupLegalGntity,jdbcType=BIT},
+      </if>
+      <if test="disbursementAccount != null">
+        disbursement_account = #{disbursementAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="disbursementAccountBankName != null">
+        disbursement_account_bank_name = #{disbursementAccountBankName,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentAccount != null">
+        repayment_account = #{repaymentAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentAccountBankName != null">
+        repayment_account_bank_name = #{repaymentAccountBankName,jdbcType=VARCHAR},
+      </if>
+      <if test="sourceOfFund != null">
+        source_of_fund = #{sourceOfFund,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="deleted != null">
+        deleted = #{deleted,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="ai.advance.funding.bean.dto.Institution1">
+    update institution1
+    set partner_code = #{partnerCode,jdbcType=VARCHAR},
+      institution_name = #{institutionName,jdbcType=VARCHAR},
+      institution_code = #{institutionCode,jdbcType=VARCHAR},
+      settlement_type = #{settlementType,jdbcType=VARCHAR},
+      institution_type = #{institutionType,jdbcType=VARCHAR},
+      credit_limit = #{creditLimit,jdbcType=DECIMAL},
+      currency = #{currency,jdbcType=VARCHAR},
+      enable = #{enable,jdbcType=BIT},
+      priority = #{priority,jdbcType=INTEGER},
+      account_sign = #{accountSign,jdbcType=BIGINT},
+      interest_rate = #{interestRate,jdbcType=DECIMAL},
+      include_holiday = #{includeHoliday,jdbcType=BIT},
+      start_time = #{startTime,jdbcType=VARCHAR},
+      end_time = #{endTime,jdbcType=VARCHAR},
+      daily_max_limit = #{dailyMaxLimit,jdbcType=INTEGER},
+      daily_max_amount_limit = #{dailyMaxAmountLimit,jdbcType=DECIMAL},
+      buyback_entity = #{buybackEntity,jdbcType=VARCHAR},
+      lender = #{lender,jdbcType=VARCHAR},
+      group_Legal_gntity = #{groupLegalGntity,jdbcType=BIT},
+      disbursement_account = #{disbursementAccount,jdbcType=VARCHAR},
+      disbursement_account_bank_name = #{disbursementAccountBankName,jdbcType=VARCHAR},
+      repayment_account = #{repaymentAccount,jdbcType=VARCHAR},
+      repayment_account_bank_name = #{repaymentAccountBankName,jdbcType=VARCHAR},
+      source_of_fund = #{sourceOfFund,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      deleted = #{deleted,jdbcType=BIT}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

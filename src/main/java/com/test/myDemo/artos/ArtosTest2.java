@@ -63,7 +63,9 @@ public class ArtosTest2 {
 //                        "values('"+ ObjectId.get()+"','606a4bb212aef605141a1dec','2021-04-05','"+info.getOrderId()+"',0.0000,0.0000,"+info.getRepaidPrincipalAmount()+",'CREATED',1617580505000);");
                 bw.write("insert into `t_institution_settlement_detail` (`id`, `summary_id`, `settle_date`, `order_id`, " +
                         "`delta_settlement_reimburse`, `delta_settlement_rebuy`, `delta_settlement_repaid`, `status`, `create_timestamp`) " +
-                        "values('"+ ObjectId.get()+"','606a4bb212aef605141a1dec','2021-04-05','"+info.getOrderId()+"',0.0000,0.0000,"+info.getRepaidPrincipalAmount()+",'CREATED',1617580505000);");
+                        "values('"+ ObjectId.get()+"','6076295212aef646f4888afc','2021-04-14','"+info.getOrderId()+"',0.0000,0.0000,"+info.getRepaidPrincipalAmount()+",'CREATED',1617580505000);");
+                bw.newLine();
+                bw.flush();
                 amount += Double.parseDouble(info.getRepaidPrincipalAmount());
             }
             System.out.println(new BigDecimal(amount).toString());
