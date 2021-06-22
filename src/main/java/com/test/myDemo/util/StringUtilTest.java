@@ -13,6 +13,8 @@ public class StringUtilTest {
         System.out.println(StringUtilTest.getPartAddress(a,0,39));
         System.out.println(StringUtilTest.getPartAddress(a,39,78));
         System.out.println(StringUtilTest.getPartAddress(a,78,117));
+        String abc = "17,00";
+        System.out.println(abc.substring(0,abc.indexOf(",")));
 
 //        System.out.println(StringUtilTest.replaceSpecialChar(StringUtilTest.getFirstName("fir##st a%%%st"),""));
 //        System.out.println(StringUtilTest.replaceSpecialChar(StringUtilTest.getMiddleName("fir##st a%%%st"),""));

@@ -49,12 +49,12 @@
         </javaClientGenerator>
 
         <!-- 指定数据库表 -->
-                <table schema="" tableName="funding_partner"  enableCountByExample="false" enableUpdateByExample="false"
+                <table schema="" tableName="institution_product_config"  enableCountByExample="false" enableUpdateByExample="false"
                        enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
                 </table>
-                <table schema="" tableName="institution1"  enableCountByExample="false" enableUpdateByExample="false"
-                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-                </table>
+<!--                <table schema="" tableName="institution1"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--                </table>-->
         <!--        <table schema="" tableName="institution_account"  enableCountByExample="false" enableUpdateByExample="false"-->
         <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
         <!--        </table>-->
