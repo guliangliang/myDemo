@@ -134,11 +134,19 @@ public class ArtosLoanInfo {
      */
     String loanPurpose;
 
+    /**
+     * 出生地原始值
+     */
+    String birthPlaceOrigin;
 
     @Override
     public String toString() {
+//        return "" + loanId + "," + productCode + "," + loanAmount + "," + disbursementAccount + "," + disburseDate + "," + idType + "," + idNumber + "," + borrowerName + "," + educationType + "," + gender + "," + birthPlace + "," + birthDate + "," + address + "," +
+//                "" + village + "," + subDistrict + "," + district + "," + zipCode + "," + phone + "," + mobile + "," + country + "," + jobType + "," + companyName + "," + jobIndustry + "," + companyBusiness + "," + yearlyIncome + "," + incomeSource + "," + bankCode + "," +
+//                "" + debtorCode + "," + motherName + "," + aliasName + "," + religion + "," + marriageStatus + "," + province + "," + customerType + "," + npwp + "," + tenorUnit + "," + tenor + ",\"" + interestRate + "\"," + loanPurpose + ","+birthPlaceOrigin+"\r\n";
         return "" + loanId + "," + productCode + "," + loanAmount + "," + disbursementAccount + "," + disburseDate + "," + idType + "," + idNumber + "," + borrowerName + "," + educationType + "," + gender + "," + birthPlace + "," + birthDate + "," + address + "," +
                 "" + village + "," + subDistrict + "," + district + "," + zipCode + "," + phone + "," + mobile + "," + country + "," + jobType + "," + companyName + "," + jobIndustry + "," + companyBusiness + "," + yearlyIncome + "," + incomeSource + "," + bankCode + "," +
-                "" + debtorCode + "," + motherName + "," + aliasName + "," + religion + "," + marriageStatus + "," + province + "," + customerType + "," + npwp + "," + tenorUnit + "," + tenor + "," + interestRate + "," + loanPurpose + "\r\n";
+                "" + debtorCode + "," + motherName + "," + aliasName + "," + religion + "," + marriageStatus + "," + province + "," + customerType + "," + npwp + "," + tenorUnit + "," + tenor + ",\"" + interestRate + "\"," + loanPurpose + "\r\n";
+
     }
 }

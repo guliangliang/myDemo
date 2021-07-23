@@ -1,5 +1,6 @@
 package com.test.myDemo.rule.el;
 
+import com.google.common.collect.Maps;
 import com.ql.util.express.DefaultContext;
 import com.ql.util.express.ExpressRunner;
 import com.ql.util.express.IExpressContext;
@@ -8,6 +9,7 @@ import com.ql.util.express.Operator;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * ali ql demo
@@ -18,6 +20,7 @@ public class QLExpressionDemo {
 
     public static void main(String[] args) throws Exception{
         ExpressRunner runner = new ExpressRunner();
+
 
         getStarted(runner);
 
@@ -296,7 +299,7 @@ public class QLExpressionDemo {
                 new String[] { "String","String" }, null);
 
 //        String express = "(stu_a == 1 && person_b==\"2\" && c>3 && name ==\"zhangsan\") || contains(address,\"999\") == true";
-        String express ="borrowerInfo_name == \"zhangsan\" && borrowerInfo_age >= 15 && borrowerInfo_isDead == false";
+//        String express ="borrowerInfo_name == \"zhangsan\" && borrowerInfo_age >= 15 && borrowerInfo_isDead == false";
 
         long start = System.currentTimeMillis();
 
@@ -307,6 +310,8 @@ public class QLExpressionDemo {
         context.put("borrowerInfo_isDead",false);
         context.put("borrowerInfo_name","zhangsan");
         context.put("address","this is an adrress name strict beijing");
+
+        String express="borrowerInfo_name in ('zhangsan','lisi')";
 
         Object r = runner.execute(express, context, null, true, true);
         System.out.println(r);

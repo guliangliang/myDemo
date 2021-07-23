@@ -9,12 +9,17 @@ public class StringUtilTest {
     public static void main(String[] args) {
 //        System.out.println(StringUtilTest.replaceSpecialChar("Hayam wuruk tower lt.19 jl.hayam wuruk no.108 Taman sari Rt04/09 Jakbar\t"," "));
 
-        String a = "1234567890123456789012345678901234567890";
-        System.out.println(StringUtilTest.getPartAddress(a,0,39));
-        System.out.println(StringUtilTest.getPartAddress(a,39,78));
-        System.out.println(StringUtilTest.getPartAddress(a,78,117));
-        String abc = "17,00";
-        System.out.println(abc.substring(0,abc.indexOf(",")));
+        String b = " 123 ";
+        System.out.println(b.strip());
+        System.out.println(b.trim());
+
+
+//        String a = "1234567890123456789012345678901234567890";
+//        System.out.println(StringUtilTest.getPartAddress(a,0,39));
+//        System.out.println(StringUtilTest.getPartAddress(a,39,78));
+//        System.out.println(StringUtilTest.getPartAddress(a,78,117));
+//        String abc = "17,00";
+//        System.out.println(abc.substring(0,abc.indexOf(",")));
 
 //        System.out.println(StringUtilTest.replaceSpecialChar(StringUtilTest.getFirstName("fir##st a%%%st"),""));
 //        System.out.println(StringUtilTest.replaceSpecialChar(StringUtilTest.getMiddleName("fir##st a%%%st"),""));

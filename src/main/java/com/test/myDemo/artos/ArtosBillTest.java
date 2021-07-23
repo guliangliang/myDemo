@@ -12,11 +12,10 @@ import java.time.format.DateTimeFormatter;
  */
 public class ArtosBillTest {
 
-    private static final DateTimeFormatter PAYMENT_SCHEDULE_FILE_FORMATTER = DateTimeFormatter.ofPattern("'RS_KP_'yyyyMMdd'.csv'");
 
     public static void main(String[] args) {
-        String loanFile = PAYMENT_SCHEDULE_FILE_FORMATTER.format(LocalDate.now());
-        String csvFile = "/Users/guliang/Downloads/b12.csv";
+        String loanFile = "RS_KP_20210712.csv";
+        String csvFile = "/Users/guliang/Downloads/jago-12-BILL.csv";
         String resultCsvFile = "/Users/guliang/Downloads/"+loanFile;
         BufferedReader br = null;
         String line = "";

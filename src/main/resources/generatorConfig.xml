@@ -49,24 +49,24 @@
         </javaClientGenerator>
 
         <!-- 指定数据库表 -->
-                <table schema="" tableName="institution_product_config"  enableCountByExample="false" enableUpdateByExample="false"
-                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
-                </table>
-<!--                <table schema="" tableName="institution1"  enableCountByExample="false" enableUpdateByExample="false"-->
-<!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-<!--                </table>-->
+        <!--                <table schema="" tableName="institution_product_config"  enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--                </table>-->
+<!--                        <table schema="" tableName="institution1"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--                        </table>-->
         <!--        <table schema="" tableName="institution_account"  enableCountByExample="false" enableUpdateByExample="false"-->
         <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
         <!--        </table>-->
-        <!--        <table schema="" tableName="institution_loan"  enableCountByExample="false" enableUpdateByExample="false"-->
-        <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-        <!--        </table>-->
+                <table schema="" tableName="institution_loan"  enableCountByExample="false" enableUpdateByExample="false"
+                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+                </table>
         <!--        <table schema="" tableName="institution_loan_schedule"  enableCountByExample="false" enableUpdateByExample="false"-->
         <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
         <!--        </table>-->
-        <!--        <table schema="" tableName="institution_rule"  enableCountByExample="false" enableUpdateByExample="false"-->
-        <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-        <!--        </table>-->
+<!--                <table schema="" tableName="institution_rule"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--                </table>-->
         <!--        <table schema="" tableName="institution_rule_condition"  enableCountByExample="false" enableUpdateByExample="false"-->
         <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
         <!--        </table>-->
@@ -85,47 +85,58 @@
         <!--        <table schema="" tableName="institution_transaction_detail"  enableCountByExample="false" enableUpdateByExample="false"-->
         <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
         <!--        </table>-->
-        <!--        <table schema="" tableName="order_loan_channel"  enableCountByExample="false" enableUpdateByExample="false"-->
+                <table schema="" tableName="order_loan_channel"  enableCountByExample="false" enableUpdateByExample="false"
+                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+                </table>
+        <!--                    <table schema="" tableName="institution_loan_repaid" enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--                        enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--                    </table>-->
+        <!--                    <table schema="" tableName="institution_account" enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--                        enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--                    </table>-->
+
+
+        <!--        <table schema="" tableName="order_loan_log"  enableCountByExample="false" enableUpdateByExample="false"-->
         <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
         <!--        </table>-->
-<!--                    <table schema="" tableName="institution_loan_repaid" enableCountByExample="false" enableUpdateByExample="false"-->
-<!--                        enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-<!--                    </table>-->
-<!--                    <table schema="" tableName="institution_account" enableCountByExample="false" enableUpdateByExample="false"-->
-<!--                        enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-<!--                    </table>-->
 
+        <!--        <table schema="" tableName="institution_loan_reimburse"  enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--        </table>-->
+        <!--        <table schema="" tableName="order_borrower"  enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--        </table>-->
 
-    <!--        <table schema="" tableName="order_loan_log"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
+        <!--        <table schema="" tableName="data_transfer"  enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--        </table>-->
+<!--                <table schema="" tableName="data_file"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--                </table>-->
+<!--                <table schema="" tableName="data_structure_fields"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--                </table>-->
+<!--            <table schema="" tableName="data_fields" enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                   enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--            </table>-->
+        <!--        <table schema="" tableName="data_mapping"  enableCountByExample="false" enableUpdateByExample="false"-->
+        <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+        <!--        </table>-->
+<!--                <table schema="" tableName="data_function"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--                </table>-->
 
-    <!--        <table schema="" tableName="institution_loan_reimburse"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
-    <!--        <table schema="" tableName="order_borrower"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
+<!--        <table schema="" tableName="flow_define"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--        </table>-->
 
-    <!--        <table schema="" tableName="data_transfer"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
-    <!--        <table schema="" tableName="data_file"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
-    <!--        <table schema="" tableName="data_structure_fields"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
-<!--    <table schema="" tableName="data_fields" enableCountByExample="false" enableUpdateByExample="false"-->
-<!--           enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-<!--    </table>-->
-    <!--        <table schema="" tableName="data_mapping"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
-    <!--        <table schema="" tableName="data_function"  enableCountByExample="false" enableUpdateByExample="false"-->
-    <!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-    <!--        </table>-->
+<!--        <table schema="" tableName="flow_node"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--        </table>-->
 
+<!--                <table schema="" tableName="sys_special_date"  enableCountByExample="false" enableUpdateByExample="false"-->
+<!--                       enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
+<!--                </table>-->
 
-</context>
-        </generatorConfiguration>
+    </context>
+</generatorConfiguration>
