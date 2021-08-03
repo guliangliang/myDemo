@@ -5,6 +5,7 @@ import com.ql.util.express.DefaultContext;
 import com.ql.util.express.ExpressRunner;
 import com.ql.util.express.IExpressContext;
 import com.ql.util.express.Operator;
+import com.test.myDemo.rule.FuncUtil;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -294,6 +295,7 @@ public class QLExpressionDemo {
 
     // 入门展示express使用部分
     private static void getStarted(ExpressRunner runner) throws Exception {
+        runner.addFunctionOfClassMethod("betweenTime", FuncUtil.class.getName(), "betweenTime",new String[] { "String","String" },null);
 
         runner.addFunctionOfClassMethod("contains", QLExpressionDemo.class.getName(), "contains",
                 new String[] { "String","String" }, null);
@@ -304,14 +306,19 @@ public class QLExpressionDemo {
         long start = System.currentTimeMillis();
 
         DefaultContext<String, Object> context = new DefaultContext<String, Object>();
-        context.put("borrowerInfo_age",20);
-        context.put("person_b",2);
-        context.put("c",4);
-        context.put("borrowerInfo_isDead",false);
-        context.put("borrowerInfo_name","zhangsan");
-        context.put("address","this is an adrress name strict beijing");
+//        context.put("borrowerInfo_age",20);
+//        context.put("person_b",2);
+//        context.put("c",4);
+//        context.put("borrowerInfo_isDead",false);
+//        context.put("borrowerInfo_name","zhangsan");
+//        context.put("address","this is an adrress name strict beijing");
 
-        String express="borrowerInfo_name in ('zhangsan','lisi')";
+//        String express="borrowerInfo_name in ('zhangsan','lisi')";
+//        String express = "1==1 && (newLoan == true  || (transferLoan == true  && partialLoan == true )) && betweenTime('01:01','02:02') == true";
+        String express = "Borrower_age >= 18 && Borrower_age <= 65 ";
+        context.put("transferLoan",false);
+        context.put("newLoan",true);
+        context.put("partialLoan",false);
 
         Object r = runner.execute(express, context, null, true, true);
         System.out.println(r);

@@ -31,8 +31,8 @@ public class HanaTest {
     private static final String PKS = "30/626/PN/LM";
 
     public static void main(String[] args) {
-        String csvFile = "/Users/guliang/Downloads/hana-30-bill.csv";
-        String resultCsvFile = "/Users/guliang/Downloads/kp_03_b_20210630.txt";
+        String csvFile = "/Users/guliang/Downloads/hana-repay.csv";
+        String resultCsvFile = "/Users/guliang/Downloads/kp_03_b_20210726.txt";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = "\t";
